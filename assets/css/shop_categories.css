@@ -1,0 +1,212 @@
+header {
+	height: 80px;
+	background: white;
+	padding-top: 35px;
+	border-bottom: 1px solid black;
+}
+
+nav ul li {
+	color: black;
+}
+
+nav ul {
+	padding: 0;
+}
+
+header .web-title {
+	color: black;
+	font-size: 25px;
+	margin-top: -15px;
+	line-height: 22px;
+}
+
+header .container {
+	padding: 0;
+}
+
+header .right-nav ul li a {
+	color: black;
+}
+
+.right-nav {
+	display: flex;
+	top: 21px;
+}
+
+.circle {
+	border-radius: 50%;
+	width: 41px;
+	height: 41px;
+	display: block;
+	line-height: 41px;
+    text-align: center;
+}
+
+.circle-grey {
+	background-color: #ececec;
+}
+
+.thumbnail {
+	border: none;
+	display: flex;
+}
+
+section {
+	height: 2165px; /* If the content grows the height must not be set, just add (uncomment) the padding-bottom and erase height property */
+	padding-top: 97px;
+	/*padding-bottom: 20px;*/
+}
+
+.area-title {
+	font-family: Poppins;
+	color: #000000;
+	font-size: 24px;/* Approximation due to font substitution */
+	font-weight: 600;
+	line-height: 80px;/* Approximation due to font substitution */
+	text-align: left;
+}
+
+.section-title {
+	color: black;
+	font-weight: 600;
+}
+
+.link {
+	font-family: Poppins;
+	color: #999999;
+	font-size: 14px;/* Approximation due to font substitution */
+	font-weight: 400;
+	line-height: 36px;/* Approximation due to font substitution */
+	text-align: left;
+}
+
+.link-active {
+	color: #990000;
+}
+
+.align {
+	padding-top: 20px;
+}
+
+.large-model {
+	width: 870px;
+	height: 258px;
+}
+
+.std-model {
+	width: 270px;
+	height: 450px;
+}
+
+.lenght-md {
+	font-size: 27px;/* Approximation due to font substitution */
+	font-weight: 600;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.description {
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 6px;
+}
+
+.price {
+	margin: 0;
+	padding-bottom: 25px;
+	display: inline;
+}
+
+.line-through {
+	text-decoration: line-through;
+}
+
+.relative-position {
+	position: relative;
+}
+
+.ribbon {
+	display: block;
+	border-radius: 3px;
+	position: absolute;
+	width: 53px;
+	height: 27px;
+	right: 19px;
+	top: 19px;
+	font-family: Poppins;
+	color: #ffffff;
+	font-size: 12px;/* Approximation due to font substitution */
+	text-align: center;
+	z-index: 1;
+}
+
+.new-product {
+	background-color: #93be2b;
+}
+
+.sale-product {
+	background-color: #cc3300;
+}
+
+.bottom-panel-img {
+	position: absolute;
+	background-color: black;
+	height: 46px;
+	bottom: -50px;
+	width: 270px;
+    transition: 0.5s;
+}
+
+.product-image {
+	height: 360px;
+	overflow: hidden;
+	position: relative;
+}
+
+.no-style {
+	list-style: none;
+	padding-left: 15px;
+}
+
+.list-pleft {
+	list-style: none;
+	padding-left: 15px;
+	line-height: 28px;
+}
+
+.no-style li {
+	display: inline-block;
+	padding: 0px 8px 8px 8px;
+	height: 46px;
+	line-height: 46px;
+}
+
+.no-style li a {
+	color: white;
+}
+
+.relative-position:hover .bottom-panel-img {
+	bottom: 0;
+} 
+
+.eye:hover {
+	background-color: grey;
+}
+
+.heart:hover {
+	background-color: grey;
+}
+
+.stats:hover {
+	background-color: grey;
+}
