@@ -1,0 +1,27 @@
+<div class="col-lg-4">
+	<div class="relative-position std-model">
+		<span class="ribbon {{include.new_or_sale}}-product">{{include.new_or_sale}}</span>
+		<div class="product-image">
+			<img src="assets/img/dummy.jpg" class="img-responsive std-model">
+			<div class="bottom-panel-img">
+				<ul class="no-style">
+					<li><a onclick="hey({{include.id}})" href="#">ADD TO CART</a></li>
+					<li class="eye"><a href="#"><i class="ion-eye lenght-md"></i></a></li>
+					<li class="heart"><a href="#"><i class="ion-heart lenght-md"></i></a></li>
+					<li class="stats"><a href="#"><i class="ion-stats-bars lenght-md"></i></a></li>
+				</ul>
+			</div>	
+		</div>
+			
+		<div class="data-description">
+			<p class="description">{{include.description}}</p>
+			{% if include.old_price %}
+				<p class="price red"><i class="   ion-social-usd"></i> {{include.price}}  </p>
+				<p class="price line-through"><i class="ion-social-usd"></i> {{include.old_price}}</p>
+			{% else %}
+				<p class="price"><i class="ion-social-usd"></i> {{include.price}}</p>
+			{% endif %}
+		</div>
+		
+	</div>
+</div>

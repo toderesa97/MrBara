@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Shop Categories</title>
+	<meta name="description" content="Home Basic layout site">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+
+<link rel="stylesheet" type="text/css" href="assets/css/shop_categories.css">
+</head>
+<body>
+
+	<header>
+		<p class="web-title">Mr.<br>Bara</p>
+		<nav class="responsive">
+	<label for="checkbox" class="checkbox"><i class="ion-navicon-round"></i></label>
+	<input type="checkbox" id="checkbox" role="button">
+	<a href="index.html" class="web-title">Mr.Bara</a>
+	<a href="#"><i class="ion-bag"></i></a>
+</nav>
+		<div class="container">
+			<nav class="no-responsive">
+	<ul>
+		<li>HOME <i class="ion-ios-arrow-down"></i></li>
+		<li>SHOP <i class="ion-ios-arrow-down"></i></li>
+		<li>PAGE <i class="ion-ios-arrow-down"></i></li>
+		<li>PORTFOLIO <i class="ion-ios-arrow-down"></i></li>
+		<li>BLOG <i class="ion-ios-arrow-down"></i></li>
+		<li>ELEMENTS <i class="ion-ios-arrow-down"></i></li>
+	</ul>
+</nav>
+		</div>
+		<div class="right-nav no-responsive">
+			<a href="#"><span class="circle circle-grey"></span></a>
+			<ul>
+				<li><a href="#">Hi! Logan <i class="ion-ios-arrow-down"></i></a></li>
+				<li><a href="#"><i class="ion-bag"></i></a></li>
+				<li><a href="#"><i class="ion-ios-search-strong"></i></a></li>
+			</ul>
+		</div>
+
+	</header>
+
+	<section>
+		<div id="shop-cart">
+	<a href="#"><span id="close" class="glyphicon glyphicon-remove" aria-hidden="true"> CLOSE</span></a>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="shop-cart-title">Cart</p>
+		</div>
+	</div>
+		<!-- Products -->
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-10">
+			<!-- overflow: scroll -->
+			<div id="products-display">
+				
+			</div>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+	<!-- Total zone -->
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-10">
+			<div class="subtotal align-horizontally">
+				<p>SUBTOTAL</p>
+				<p class="price"><i class="ion-social-usd"></i> 36.00</p>
+			</div>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+	<!-- Product zone -->
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-10">
+			<div class="butttons align-horizontally">
+				<div class="jumbo align-horizontally view-cart">
+					<p>View cart</p>
+					<span><i class="ion-chevron-right"></i></span>
+				</div>
+				<div class="jumbo align-horizontally checkout">
+					<p>Checkout</p>
+					<span><i class="ion-chevron-right"></i></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+</div>
+
+<div id="overlayer"></div>
+		<div class="container no-responsive">
+			<div class="row">
+				<!-- categories column, filters ... -->
+				<div class="col-lg-3">
+					<p class="area-title">CATEGORIES</p>
+				</div>
+
+				<!-- Photos -->
+				<div class="col-lg-9 align">
+					<!-- breadcrum generator -->
+					<a class="link" href="index.html">HOME </a><i class="ion-ios-arrow-right"></i><a href="#" class="link link-active"> SHOP CATEGORIES</a>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-3">
+					<p class="section-title">MEN</p>
+					<ul class="list-pleft">
+						<li><a href="#">New products</a><a href="#">12</a></li>
+						<li><a href="#">Gymwear</a><a href="#">12</a></li>
+						<li><a href="#">Jackets</a><a href="#">12</a></li>
+						<li><a href="#">Jeans</a><a href="#">12</a></li>
+						<li><a href="#">Shirts</a><a href="#">12</a></li>
+						<li><a href="#">T-Shirts</a><a href="#">12</a></li>
+						<li><a href="#">Accessories</a><a href="#">12</a></li>
+					</ul>
+					<p class="section-title">WOMEN</p>
+					<p class="section-title">FOOTWEAR</p>
+					<p class="section-title">ACCESSORIES</p>
+					<p class="area-title">Filter By</p>
+					<p class="section-title">SIZE</p>
+					<ul class="no-style no-space">
+						<li><span class="circle circle-grey">XS</span></li>
+						<li><span class="circle circle-grey">S</span></li>
+						<li><span class="circle circle-grey">M</span></li>
+						<li><span class="circle circle-grey">L</span></li>
+						<li><span class="circle circle-grey">XL</span></li>
+					</ul>
+					<p class="section-title">COLOR</p>
+					<ul class="no-style no-space">
+						<li><span class="circle circle-blue"><i class="ion-checkmark"></i></span></li>
+						<li><span class="circle circle-pink"><i class="ion-checkmark"></i></span></li>
+						<li><span class="circle circle-red"><i class="ion-checkmark"></i></span></li>
+						<li><span class="circle circle-green active"><i class="ion-checkmark"></i></span></li>
+					</ul>
+					<p class="section-title">BRANDS</p>
+					<ul class="list-pleft no-space">
+						<li><a href="#">The North Face</a></li>
+						<li><a href="#">Zara Basic</a></li>
+						<li><a href="#">Moschino</a></li>
+						<li><a href="#">Supreme</a></li>
+						<li><a href="#">Ecko Unitd</a></li>
+					</ul>
+
+					<p class="area-title">Recent Product</p>
+					<div class="thumbnail">
+						<img src="https://dummyimage.com/77x101/000/fff.png" alt="dummy image">
+						<div>
+							<p class="description">Barbour T-Shirt International</p>
+							<p class="price"><i class="ion-social-usd"></i> 30.00</p>
+						</div>
+						
+					</div>
+					<div class="thumbnail">
+						<img src="https://dummyimage.com/77x101/000/fff.png" alt="dummy image">
+						<div>
+							<p class="description">Barbour T-Shirt International</p>
+							<p class="price"><i class="ion-social-usd"></i> 30.00</p>
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<img src="assets/img/dummy.jpg" class="img-responsive large-model">
+					<div class="row align">
+						<div class="col-lg-4">
+							<p><span class="red">1260</span> PRODUCTS FOUND</p>
+						</div>
+						<div class="col-lg-4">
+							<p class="text-center">SORT BY </p>
+						</div>
+						<div class="col-lg-4">
+							<p class="text-right">View  <i class="ion-android-apps lenght-md"></i> <i class="ion-navicon-round lenght-md"></i> </p>
+						</div>
+					</div>
+					<div class="row" id="all-products">
+						
+					</div>
+					<!-- 3 row -->
+					<div class="row">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container responsive">
+			<p class="web-title">Mr.Bara's Shop</p>
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-sx-12">
+					<div class="red-box">
+						<p>FILTER BY</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-6">
+					<span>Icon</span>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-6">
+					<span>Sort by: </span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="responsive">
+	<div class="row">
+		<div class="col-sm-12 the-footer">
+			<p class="web-title">Mr.<br>Bara</p>
+			<ul>
+				<li><a href="#">site map</a></li>
+				<li><a href="#">term &amp; conditions</a></li>
+				<li><a href="#">privacy policy</a></li>
+				<li><a href="#">help</a></li>
+				<li><a href="#">affiliate</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Our location</a></li>
+				<li><a href="#">career</a></li>
+				<li><a href="#">about</a></li>
+				<li><a href="#">contact</a></li>
+			</ul>
+			<div class="social-media">
+				<ul>
+					<li>ENG <i class="ion-ios-arrow-down"></i></li>
+					<li>USD <i class="ion-ios-arrow-down"></i></li>
+					<li><i class="ion-social-facebook"></i></li>
+					<li><i class="ion-social-twitter"></i></li>
+					<li><i class="ion-social-rss"></i></li>
+				</ul>
+			</div>
+			<ul>
+				<li>&copy; Mr.Bara 2017</li>
+				<li>All rights reserved</li>
+			</ul>
+		</div>
+	</div>
+</footer>
+	<footer class="no-responsive">
+	<p class="web-title">Mr.<br>Bara</p>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<ul>
+					<li>&copy; Mr.Bara 2017</li>
+					<li>All rights reserved</li>
+				</ul>
+			</div>
+			<div class="col-lg-3">
+				<ul>
+					<li><a href="#">site map</a></li>
+					<li><a href="#">term &amp; conditions</a></li>
+					<li><a href="#">privacy policy</a></li>
+					<li><a href="#">help</a></li>
+					<li><a href="shop_categories.html">affiliate</a></li>
+				</ul>
+			</div>
+			<div class="col-lg-3">
+				<ul>
+					<li><a href="#">Our location</a></li>
+					<li><a href="#">career</a></li>
+					<li><a href="#">about</a></li>
+					<li><a href="#">contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="social-media">
+		<ul>
+			<li>ENG <i class="ion-ios-arrow-down"></i></li>
+			<li>USD <i class="ion-ios-arrow-down"></i></li>
+			<li><i class="ion-social-facebook"></i></li>
+			<li><i class="ion-social-twitter"></i></li>
+			<li><i class="ion-social-rss"></i></li>
+		</ul>
+	</div>
+</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="assets/js/product_layout.js"></script>
+</body>
+</html>

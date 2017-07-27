@@ -1,0 +1,167 @@
+---
+layout: default
+title: 'Product layout'
+---
+	<link rel="stylesheet" type="text/css" href="assets/css/shop_categories.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/product_layout.css">
+</head>
+
+<body>
+	<header>
+		<p class="web-title">Mr.<br>Bara</p>
+		{% include navbar_responsive.html %}
+		<div class="container">
+			{% include navbar_elements.html %}
+		</div>
+		<div class="right-nav no-responsive">
+			<a href="#"><span class="circle circle-grey"></span></a>
+			<ul>
+				<li><a href="#">Hi! Logan <i class="ion-ios-arrow-down"></i></a></li>
+				<li><a href="#"><i class="ion-bag"></i></a></li>
+				<li><a href="#"><i class="ion-ios-search-strong"></i></a></li>
+			</ul>
+		</div>
+	</header>
+	
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<h1 class="page-title">Product Example</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4">
+					<!-- breadcrum generator -->
+					<a class="link" href="index.html">HOME </a><i class="ion-ios-arrow-right"></i><a href="#" class="link link-active"> SHOP CATEGORIES</a>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-4">
+					<img src="assets/img/dummy.jpg" alt="A dummy image" class="img-responsive med-model">
+					<div class="align-horizontally adjust margin-top">
+						<img src="assets/img/dummy.jpg" alt="A dummy image" class="img-responsive xs-model">
+						<img src="assets/img/dummy.jpg" alt="A dummy image" class="img-responsive xs-model">
+						<img src="assets/img/dummy.jpg" alt="A dummy image" class="img-responsive xs-model">
+						<img src="assets/img/dummy.jpg" alt="A dummy image" class="img-responsive xs-model">
+					</div>
+				</div>
+
+				<div class="col-lg-5">
+					<div class="align-horizontally adjust">
+						<p>Patagonia Wavefarer Bucket Hat</p>
+						<div class="align-horizontally adjust">
+							<span class="xs-circle circle-grey"><i class="ion-ios-arrow-left"></i></span>
+							<span class="xs-circle circle-grey"><i class="ion-ios-arrow-right"></i></span>	
+						</div>
+					</div>
+					<div class="align-horizontally">
+						<p class="yellow-star"><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star grey"></i>&nbsp;&nbsp;<a class="grey" href="#">4 reviews</a>&nbsp; <p class="grey">|</p> &nbsp; <a class="grey" href="#">Write your review</a>
+						</p>
+					</div>
+					<p class="price"><i class="ion-social-usd"></i> 36.00</p>
+					<div class="align-horizontally no-baseline">
+						<p><i class="ion-navicon-round lenght-md"></i></p>	
+						<p>Only <span class="bold">15</span> left <i class="ion-ios-arrow-down"></i></p>
+						<p>| Available: <span class="green">In Stock</span></p>
+					</div>
+					
+					<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, amet voluptates modi fugit, delectus aperiam molestias suscipit incidunt optio omnis excepturi quos animi esse, ullam, unde fugiat. Nobis, ipsam, autem?</p>
+
+					<div class="align-horizontally no-baseline">
+						<p class="section-title">SELECT COLOR</p>
+						<ul class="no-style">
+							<li><span class="circle circle-blue"><i class="ion-checkmark"></i></span></li>
+							<li><span class="circle circle-pink"><i class="ion-checkmark"></i></span></li>
+							<li><span class="circle circle-red"><i class="ion-checkmark"></i></span></li>
+							<li><span class="circle circle-green active"><i class="ion-checkmark"></i></span></li>
+						</ul>
+					</div>
+					<div class="align-horizontally no-baseline">
+						<p class="section-title">SIZE</p>
+						<ul class="no-style">
+							<li><span class="circle circle-grey">XS</span></li>
+							<li><span class="circle circle-grey">S</span></li>
+							<li><span class="circle circle-grey">M</span></li>
+							<li><span class="circle circle-grey">L</span></li>
+							<li><span class="circle circle-grey">XL</span></li>
+						</ul>
+					</div>
+
+					<div class="align-horizontally">
+						<div class="jumbo align-horizontally">
+							<span><i class="ion-minus"></i></span>
+							<p id="counter-number">0</p>
+							<span><i class="ion-plus"></i></span>
+						</div>
+						<div class="jumbo align-horizontally add-to-cart">
+							<span><i class="ion-plus"></i></span>
+							<p>Add To Cart</p>
+						</div>
+						<div class="align-horizontally">
+							<span class="circle circle-grey active"><i class="ion-ios-heart"></i></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3">
+					<img src="assets/img/dummy.jpg" alt="" class="img-responsive">
+					<div class="align-horizontally">
+						<span class="circle circle-grey active"><i class="ion-ios-heart"></i></span>
+						<p>We commit will send this product in 2 days.</p>
+					</div>
+					<div class="align-horizontally">
+						<span class="circle circle-grey active"><i class="ion-ios-telephone"></i></span>
+						<p>Call us now for more info about our products</p>
+					</div>
+					<div class="align-horizontally">
+						<span class="circle circle-grey active"><i class="ion-ios-heart"></i></span>
+						<p>We commit will send this product in 2 days.</p>
+					</div>
+					<div class="align-horizontally">
+						<span class="circle circle-grey active"><i class="ion-ios-heart"></i></span>
+						<p>We commit will send this product in 2 days.</p>
+					</div>
+					<p>Recent Products</p>
+					<div class="thumbnail">
+						<img src="https://dummyimage.com/77x101/000/fff.png" alt="dummy image">
+						<div>
+							<p class="description">Barbour T-Shirt International</p>
+							<p class="price"><i class="ion-social-usd"></i> 30.00</p>
+						</div>
+					</div>
+					<div class="thumbnail">
+						<img src="https://dummyimage.com/77x101/000/fff.png" alt="dummy image">
+						<div>
+							<p class="description">Barbour T-Shirt International</p>
+							<p class="price"><i class="ion-social-usd"></i> 30.00</p>
+						</div>
+					</div>
+					<div class="thumbnail">
+						<img src="https://dummyimage.com/77x101/000/fff.png" alt="dummy image">
+						<div>
+							<p class="description">Barbour T-Shirt International</p>
+							<p class="price red"><i class="ion-social-usd"></i> 30.00</p>
+							<p class="price line-through"><i class="ion-social-usd"></i> 35.00</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-9">
+					<ul class="nav nav-tabs">
+					  <li role="presentation" class="active"><a href="#">Home</a></li>
+					  <li role="presentation"><a>Profile</a></li>
+					  <li role="presentation"><a>Messages</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	
+	{% include footer_responsive.html %}
+	{% include footer_noResponsive.html %}
+	
+</body>

@@ -1,0 +1,79 @@
+section .page-title {
+	font-family: Poppins;
+}
+
+.med-model {
+	width: 370px;
+	height: 490px;
+}
+
+.xs-model {
+	width: 78px;
+	height: 104px;
+}
+
+.adjust {
+	justify-content: space-between;
+}
+
+.align-horizontally {
+	display: flex;
+    align-items: baseline;
+}
+
+.no-baseline {
+	align-items: unset;
+}
+
+.green {
+	color: green;
+}
+
+.margin-top {
+	margin-top: 20px;
+}
+
+.xs-circle {
+	border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: block;
+    line-height: 18px;
+    text-align: center;
+    margin-right: 8px;
+} 
+
+.grey {
+	color: #ececec;
+	font-weight: bold;
+}
+
+.small {
+	line-height: 22px;
+	font-size: 14px;
+	text-align: justify;
+}
+
+
+.add-to-cart {
+	width: 150px;
+	background-color: #660000;
+}
+
+.add-to-cart .ion-plus, .add-to-cart p {
+	color: white;
+}
+
+.ion-ios-heart {
+	font-size: 20px;
+}
+
+.ion-ios-telephone {
+	font-size: 20px;
+}
+
+.nav-tabs>li.active>a {
+	border: none;
+	border-bottom: 1px solid black;
+}
+
