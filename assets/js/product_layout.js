@@ -38,9 +38,9 @@ $(document).ready(function(){
 					</div>
 						
 					<div class="data-description">
-						<p class="description">${clothes[i].description}</p>`
+						<p class="description">${clothes[i].description}</p>`;
 
-		if (clothes.price_old == undefined) {
+		if (clothes[i].price_old != undefined) {
 			products += `
 				<p class="price red"><i class="   ion-social-usd"></i> ${clothes[i].price}  </p>
 				<p class="price line-through"><i class="ion-social-usd"></i> ${clothes[i].price_old}</p>
@@ -51,7 +51,7 @@ $(document).ready(function(){
 			`;
 		} else {
 			products += `
-				<p class="price"><i class="ion-social-usd"></i> ${clothes[i].price_old}</p>
+				<p class="price"><i class="ion-social-usd"></i> ${clothes[i].price}</p>
 				</div>
 		
 				</div>
