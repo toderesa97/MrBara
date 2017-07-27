@@ -377,6 +377,32 @@ footer ul, footer ul a {
 	text-decoration: line-through;
 }
 
+#products-display {
+	overflow: auto;
+	height: 600px;
+}
+
+#the_bag {
+	position: relative;
+}
+
+#the_bag span {
+	position: absolute;
+	right: -5px;
+    bottom: -1px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #660000;
+    line-height: 20px;
+    text-align: center;
+}
+
+#nothing-bought-msg {
+	
+}
+
 @media only screen and (max-width: 1430px) {
 	
 	header {

@@ -24,6 +24,10 @@
 	<input type="checkbox" id="checkbox" role="button">
 	<a href="index.html" class="web-title">Mr.Bara</a>
 	<a href="#"><i class="ion-bag"></i></a>
+	<div id="the_bag">
+		<a href="#"><i class="ion-bag"></i></a>
+		<span>0</span>
+	</div>
 </nav>
 		<div class="container">
 			<nav class="no-responsive">
@@ -41,7 +45,10 @@
 			<ul>
 				<li class="hide-when-responsive"><a href="#">LOG IN</a></li>
 				<li class="hide-when-responsive"><a href="#">SIGN UP</a></li>
-				<li><a href="#"><i class="ion-bag"></i></a></li>
+				<li id="the_bag">
+					<a href="#"><i class="ion-bag"></i></a>
+					<span>0</span>
+				</li>
 				<li class="hide-when-responsive"><a href="#"><i class="ion-ios-search-strong"></i></a></li>
 			</ul>
 		</div>
@@ -58,9 +65,12 @@
 	<div class="row">
 		<div class="col-lg-1"></div>
 		<div class="col-lg-10">
-			<!-- overflow: scroll -->
+			<!-- overflow: auto -->
 			<div id="products-display">
-				
+				<div id="nothing-bought-msg">
+					<span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
+					<p>Nothing bought yet...</p>
+				</div>
 			</div>
 		</div>
 		<div class="col-lg-1"></div>
@@ -95,7 +105,7 @@
 	</div>
 </div>
 
-<div id="overlayer"></div>
+<div id="overlayer" onclick="close()"></div>
 		
 	</header>
 
