@@ -1,8 +1,20 @@
-<img src="assets/img/{{include.url_img}}" class="img-responsive"><br>
+<div class="relative-position">
+	<img src="assets/img/{{include.url_img}}" class="img-responsive"><br>
+
+	<div class="bottom-panel-img">
+		<ul class="no-style">
+			<li><a class="addtocart" onclick="return hey({{include.id}}, this);" href="#">ADD TO CART</a></li>
+			<li class="eye"><a href="#"><i class="ion-eye lenght-md"></i></a></li>
+			<li class="heart"><a href="#"><i class="ion-heart lenght-md"></i></a></li>
+			<li class="stats"><a href="#"><i class="ion-stats-bars lenght-md"></i></a></li>
+		</ul>
+	</div>
+</div>
 <div class="center-text">
 	<p class="yellow-star"><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i></p>
 	
 	<p class="description">{{include.description}}</p>
 	<br>
 	<p class="description"><i class="ion-social-usd"></i> {{include.price}}</p>
-</div>
+</div>	
+

@@ -204,6 +204,10 @@ button span {
 	margin: 0;
 }
 
+.center {
+	text-align: center;
+}
+
 .yellow-star {
 	color: #ffcc00;
 	font-size: 18px
@@ -397,16 +401,124 @@ footer ul, footer ul a {
     background-color: #660000;
     line-height: 20px;
     text-align: center;
+    color: white;
 }
 
 #nothing-bought-msg {
-	
+	height: 600px;
+	position: relative;
+}
+
+#nothing-bought-msg div {
+	position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 390px;
+    height: 600px;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+}
+
+#nothing-bought-msg span {
+	font-size: 85px;
+}
+
+#nothing-bought-msg p {
+	font-size: 15px;
+}
+
+.bottom-panel-img {
+	position: absolute;
+	background-color: black;
+	height: 46px;
+	bottom: -46px;
+	width: 358px;
+    transition: 0.5s;
+}
+
+.relative-position {
+	position: relative;
+	overflow: hidden;
+	max-height: 480px;
+}
+
+.relative-position:hover .bottom-panel-img {
+	bottom: 0;
+} 
+
+.no-style {
+	list-style: none;
+	padding-left: 15px;
+	display: flex;
+}
+
+.list-pleft {
+	list-style: none;
+	padding-left: 15px;
+	line-height: 28px;
+}
+
+.no-style li {
+	display: inline-block;
+	padding: 0px 8px 8px 8px;
+	height: 46px;
+	line-height: 46px;
+}
+
+.no-style li a {
+	color: white;
+}
+
+.lenght-md {
+	font-size: 27px;/* Approximation due to font substitution */
+	font-weight: 600;
+}
+
+.eye:hover {
+	background-color: grey;
+}
+
+.heart:hover {
+	background-color: grey;
+}
+
+.stats:hover {
+	background-color: grey;
+}
+
+img.xs-model {
+	max-width: 77px;
+	max-height: 101px;
+}
+
+.buttons {
+	padding-top: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+	#skater {
+		max-height: 285px;
+		border: 15px solid white;
+		margin-top: -239px;
+		content: url('http://res.cloudinary.com/dx14yj8j9/image/upload/c_fill,h_285,w_382/v1501260640/feet_skater_jietoy.jpg');
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	#skater {
+		max-height: 385px;
+		border: 15px solid white;
+		margin-top: -239px;
+		content: url('http://res.cloudinary.com/dx14yj8j9/image/upload/c_fill,h_285,w_322/v1501260640/feet_skater_jietoy.jpg');
+	}
 }
 
 @media only screen and (max-width: 1430px) {
 	
 	header {
 		padding: 0;
+		background-image: url('http://res.cloudinary.com/dx14yj8j9/image/upload/c_fill,dn_105,h_1022,q_94,r_0,w_640,z_2.5/v1501260643/backHeader_smapkg.jpg');
 	}
 
 	header .container {
@@ -494,11 +606,6 @@ footer ul, footer ul a {
 	    line-height: 20px;
 	}
 
-	#skater {
-		height: 303px;
-		border: 15px solid white;
-		margin-top: -239px;
-	}
 	
 	p.section_title {
 		padding-bottom: 10px;
@@ -518,6 +625,11 @@ footer ul, footer ul a {
 
 	#newsletter {
 		padding-bottom: 90px;
+	}
+
+	#shop-cart {
+		width: 350px; 
+		right: -350px;
 	}
 }
 

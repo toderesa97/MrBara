@@ -23,6 +23,9 @@ section .page-title {
 
 .no-baseline {
 	align-items: unset;
+	width: 346px;
+    justify-content: space-between;
+    padding-bottom: 30px;
 }
 
 .green {
@@ -44,7 +47,7 @@ section .page-title {
 } 
 
 .grey {
-	color: #ececec;
+	color: #c9c7c7;
 	font-weight: bold;
 }
 
@@ -52,6 +55,7 @@ section .page-title {
 	line-height: 22px;
 	font-size: 14px;
 	text-align: justify;
+	padding-bottom: 30px;
 }
 
 
@@ -77,3 +81,68 @@ section .page-title {
 	border-bottom: 1px solid black;
 }
 
+.jumbo.add-to-cart:hover {
+	cursor: pointer;
+}
+
+.ion-plus:hover {
+	cursor: pointer;
+}
+
+.ion-minus:hover {
+	cursor: pointer;
+}
+
+.info {
+	padding-top: 20px;
+}
+
+.info i {
+	padding: 0 5px;
+	font-size: 17px;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+#dynamicPill {
+	padding-top: 50px;
+}
+
+#dynamicPill a {
+	color: #c9c7c7;
+	font-size: 18px;
+}
+
+#dynamicPill a:hover {
+	background-color: white;
+}
+
+#dynamicPill li.active a {
+	color: #000;
+	border-bottom: 1px solid #000;
+}
+
+#dynamicPill ul {
+	border-bottom: 1px solid grey;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+	color: black;
+	background-color: white;
+	border-bottom: 1px solid grey;
+	border-radius: 0px;
+}
+
+.header-title {
+	font-size: 25px;
+	font-family: Poppins, Arial;
+	text-align: center;
+	padding-top: 50px;
+	color: black;
+}
+
+#related-products .relative-position {
+	max-height: 350px;
+}

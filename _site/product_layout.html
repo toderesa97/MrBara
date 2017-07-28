@@ -5,7 +5,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Product layout</title>
 	<meta name="description" content="Home Basic layout site">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
@@ -20,12 +20,12 @@
 
 <body>
 	<header>
-		<p class="web-title">Mr.<br>Bara</p>
+		<a href="index.html"><p class="web-title">Mr.<br>Bara</p></a>
 		<nav class="responsive">
 	<label for="checkbox" class="checkbox"><i class="ion-navicon-round"></i></label>
 	<input type="checkbox" id="checkbox" role="button">
 	<a href="index.html" class="web-title">Mr.Bara</a>
-	<a href="#"><i class="ion-bag"></i></a>
+	
 	<div id="the_bag">
 		<a href="#"><i class="ion-bag"></i></a>
 		<span>0</span>
@@ -35,7 +35,7 @@
 			<nav class="no-responsive">
 	<ul>
 		<li>HOME <i class="ion-ios-arrow-down"></i></li>
-		<li>SHOP <i class="ion-ios-arrow-down"></i></li>
+		<li><a href="shop_categories.html">SHOP </a><i class="ion-ios-arrow-down"></i></li>
 		<li>PAGE <i class="ion-ios-arrow-down"></i></li>
 		<li>PORTFOLIO <i class="ion-ios-arrow-down"></i></li>
 		<li>BLOG <i class="ion-ios-arrow-down"></i></li>
@@ -47,13 +47,67 @@
 			<a href="#"><span class="circle circle-grey"></span></a>
 			<ul>
 				<li><a href="#">Hi! Logan <i class="ion-ios-arrow-down"></i></a></li>
-				<li><a href="#"><i class="ion-bag"></i></a></li>
+				<li id="the_bag">
+					<a href="#"><i class="ion-bag"></i></a>
+					<span>0</span>
+				</li>
 				<li><a href="#"><i class="ion-ios-search-strong"></i></a></li>
 			</ul>
 		</div>
+
 	</header>
 	
 	<section>
+		<div id="shop-cart">
+	<a href="#"><span id="close" class="glyphicon glyphicon-remove" aria-hidden="true"> CLOSE</span></a>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="shop-cart-title">Cart</p>
+		</div>
+	</div>
+		<!-- Products -->
+	<div class="row">
+		<div class="col-lg-1 col-xs-1"></div>
+		<div class="col-lg-10 col-xs-10">
+			<!-- overflow: auto -->
+			<div id="products-display">
+
+			</div>
+		</div>
+		<div class="col-lg-1 col-xs-1"></div>
+	</div>
+	<!-- Total zone -->
+	<div class="row">
+		<div class="col-lg-1 col-xs-1"></div>
+		<div class="col-lg-10 col-xs-10">
+			<div class="subtotal align-horizontally">
+				<p>SUBTOTAL</p>
+				<p class="price" id="cart-price"><i class="ion-social-usd"></i> 36.00</p>
+			</div>
+		</div>
+		<div class="col-lg-1 col-xs-1"></div>
+	</div>
+	<!-- Product zone -->
+	<div class="row">
+		<div class="col-lg-1 col-xs-1"></div>
+		<div class="col-lg-10 col-xs-10">
+			<div class="butttons align-horizontally">
+				<div class="jumbo align-horizontally view-cart">
+					<p>View cart</p>
+					<span><i class="ion-chevron-right"></i></span>
+				</div>
+				<div class="jumbo align-horizontally checkout">
+					<p>Checkout</p>
+					<span><i class="ion-chevron-right"></i></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-1 col-xs-1"></div>
+	</div>
+</div>
+
+<div id="overlayer" onclick="close()"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4">
@@ -63,76 +117,200 @@
 			<div class="row">
 				<div class="col-lg-4">
 					<!-- breadcrum generator -->
-					<a class="link" href="index.html">HOME </a><i class="ion-ios-arrow-right"></i><a href="#" class="link link-active"> SHOP CATEGORIES</a>
+					<a class="link" href="index.html">HOME </a><i class="ion-ios-arrow-right"></i><a href="shop_categories.html" class="link link-active"> SHOP CATEGORIES</a>
 				</div>
 			</div>
 
 			<div class="row">
-				<div class="col-lg-4">
-					<img src="assets/img/dummy.jpg" alt="A dummy image" class="img-responsive med-model">
-					<div class="align-horizontally adjust margin-top">
-						<img src="assets/img/dummy.jpg" alt="A dummy image" class="img-responsive xs-model">
-						<img src="assets/img/dummy.jpg" alt="A dummy image" class="img-responsive xs-model">
-						<img src="assets/img/dummy.jpg" alt="A dummy image" class="img-responsive xs-model">
-						<img src="assets/img/dummy.jpg" alt="A dummy image" class="img-responsive xs-model">
-					</div>
-				</div>
+				<div class="col-lg-9">
+					<div class="row">
+						<div class="col-lg-5">
+							<img src="assets/img/dummy.jpg" alt="A dummy image" class="img-responsive med-model">
+							<div class="align-horizontally adjust margin-top">
+								<img src="assets/img/dummy.jpg" alt="A dummy image" class="img-responsive xs-model">
+								<img src="assets/img/dummy.jpg" alt="A dummy image" class="img-responsive xs-model">
+								<img src="assets/img/dummy.jpg" alt="A dummy image" class="img-responsive xs-model">
+								<img src="assets/img/dummy.jpg" alt="A dummy image" class="img-responsive xs-model">
+							</div>						
+						</div>
 
-				<div class="col-lg-5">
-					<div class="align-horizontally adjust">
-						<p>Patagonia Wavefarer Bucket Hat</p>
-						<div class="align-horizontally adjust">
-							<span class="xs-circle circle-grey"><i class="ion-ios-arrow-left"></i></span>
-							<span class="xs-circle circle-grey"><i class="ion-ios-arrow-right"></i></span>	
-						</div>
-					</div>
-					<div class="align-horizontally">
-						<p class="yellow-star"><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star grey"></i>&nbsp;&nbsp;<a class="grey" href="#">4 reviews</a>&nbsp; <p class="grey">|</p> &nbsp; <a class="grey" href="#">Write your review</a>
-						</p>
-					</div>
-					<p class="price"><i class="ion-social-usd"></i> 36.00</p>
-					<div class="align-horizontally no-baseline">
-						<p><i class="ion-navicon-round lenght-md"></i></p>	
-						<p>Only <span class="bold">15</span> left <i class="ion-ios-arrow-down"></i></p>
-						<p>| Available: <span class="green">In Stock</span></p>
-					</div>
-					
-					<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, amet voluptates modi fugit, delectus aperiam molestias suscipit incidunt optio omnis excepturi quos animi esse, ullam, unde fugiat. Nobis, ipsam, autem?</p>
+						<div class="col-lg-7">
+							<div class="align-horizontally adjust">
+								<p>Patagonia Wavefarer Bucket Hat</p>
+								<div class="align-horizontally adjust">
+									<span class="xs-circle circle-grey"><i class="ion-ios-arrow-left"></i></span>
+									<span class="xs-circle circle-grey"><i class="ion-ios-arrow-right"></i></span>	
+								</div>
+							</div>
+							<div class="align-horizontally">
+								<p class="yellow-star"><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star grey"></i>&nbsp;&nbsp;<a class="grey" href="#">4 reviews</a>&nbsp; <p class="grey">|</p> &nbsp; <a class="grey" href="#">Write your review</a>
+								</p>
+							</div>
+							<p class="price"><i class="ion-social-usd"></i> 36.00</p>
+							<div class="align-horizontally no-baseline">
+								<p><i class="ion-navicon-round lenght-md"></i></p>	
+								<p>Only <span class="bold">15</span> left <i class="ion-ios-arrow-down"></i></p>
+								<p>| Available: <span class="green">In Stock</span></p>
+							</div>
+							
+							<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, amet voluptates modi fugit, delectus aperiam molestias suscipit incidunt optio omnis excepturi quos animi esse, ullam, unde fugiat. Nobis, ipsam, autem?</p>
 
-					<div class="align-horizontally no-baseline">
-						<p class="section-title">SELECT COLOR</p>
-						<ul class="no-style">
-							<li><span class="circle circle-blue"><i class="ion-checkmark"></i></span></li>
-							<li><span class="circle circle-pink"><i class="ion-checkmark"></i></span></li>
-							<li><span class="circle circle-red"><i class="ion-checkmark"></i></span></li>
-							<li><span class="circle circle-green active"><i class="ion-checkmark"></i></span></li>
-						</ul>
-					</div>
-					<div class="align-horizontally no-baseline">
-						<p class="section-title">SIZE</p>
-						<ul class="no-style">
-							<li><span class="circle circle-grey">XS</span></li>
-							<li><span class="circle circle-grey">S</span></li>
-							<li><span class="circle circle-grey">M</span></li>
-							<li><span class="circle circle-grey">L</span></li>
-							<li><span class="circle circle-grey">XL</span></li>
-						</ul>
+							<div class="align-horizontally no-baseline">
+								<p class="section-title">SELECT COLOR</p>
+								<ul class="no-style">
+									<li><span class="circle circle-blue"><i class="ion-checkmark"></i></span></li>
+									<li><span class="circle circle-pink"><i class="ion-checkmark"></i></span></li>
+									<li><span class="circle circle-red"><i class="ion-checkmark"></i></span></li>
+									<li><span class="circle circle-green active"><i class="ion-checkmark"></i></span></li>
+								</ul>
+							</div>
+							<div class="align-horizontally no-baseline">
+								<p class="section-title">SIZE</p>
+								<ul class="no-style">
+									<li><span class="circle circle-grey">XS</span></li>
+									<li><span class="circle circle-grey">S</span></li>
+									<li><span class="circle circle-grey">M</span></li>
+									<li><span class="circle circle-grey">L</span></li>
+									<li><span class="circle circle-grey">XL</span></li>
+								</ul>
+							</div>
+
+							<div class="align-horizontally">
+								<div class="jumbo align-horizontally">
+									<span><i class="ion-minus"></i></span>
+									<p id="counter-number">0</p>
+									<span><i class="ion-plus"></i></span>
+								</div>
+								<div class="jumbo align-horizontally add-to-cart">
+									<span><i class="ion-plus"></i></span>
+									<p>Add To Cart</p>
+								</div>
+								<div class="align-horizontally">
+									<span class="circle circle-grey active"><i class="ion-ios-heart"></i></span>
+								</div>
+							</div>	
+
+							<div class="info">
+								<p><span class="bold">SKU: </span>ABD765SSHDB</p>
+								<p><span class="bold">SHARE: </span><i class="ion-social-twitter"></i>
+								<i class="ion-social-facebook"></i><i class="ion-social-googleplus"></i>
+								<i class="ion-social-pinterest"></i><i class="ion-social-instagram"></i></p>
+							</div>
+
+						</div>					
 					</div>
 
-					<div class="align-horizontally">
-						<div class="jumbo align-horizontally">
-							<span><i class="ion-minus"></i></span>
-							<p id="counter-number">0</p>
-							<span><i class="ion-plus"></i></span>
+					<div id="dynamicPill">
+						<ul class="nav nav-pills">
+					    <li class="active"><a data-toggle="pill" href="#home">Description</a></li>
+					    <li><a data-toggle="pill" href="#menu1">Reviews</a></li>
+					    <li><a data-toggle="pill" href="#menu2">Tags</a></li>
+					    <li><a data-toggle="pill" href="#menu3">Additional information</a></li>
+					    <li><a data-toggle="pill" href="#menu4">Custom Tan Info</a></li>
+					    <li><a data-toggle="pill" href="#menu5">Custom Tab Video</a></li>
+					  </ul>
+					  
+					  <div class="tab-content">
+					    <div id="home" class="tab-pane fade in active">
+					      <h3>Description</h3>
+					      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					    </div>
+					    <div id="menu1" class="tab-pane fade">
+					      <h3>Reviews</h3>
+					      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					    </div>
+					    <div id="menu2" class="tab-pane fade">
+					      <h3>Tags</h3>
+					      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+					    </div>
+					    <div id="menu3" class="tab-pane fade">
+					      <h3>Additional Information</h3>
+					      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+					    </div>
+					    <div id="menu4" class="tab-pane fade">
+					      <h3>Custom Tab Info</h3>
+					      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+					    </div>
+					    <div id="menu5" class="tab-pane fade">
+					      <h3>Custom Tab Video</h3>
+					      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+					    </div>
+					  </div>
+					</div>
+
+					<p class="header-title">Related Product</p>
+					<div class="row" id="related-products">
+						<div class="col-lg-4">
+							<div class="relative-position">
+	<img src="assets/img/LonglineHoodedT-shirt.jpg" class="img-responsive"><br>
+
+	<div class="bottom-panel-img">
+		<ul class="no-style">
+			<li><a class="addtocart" onclick="return hey(1, this);" href="#">ADD TO CART</a></li>
+			<li class="eye"><a href="#"><i class="ion-eye lenght-md"></i></a></li>
+			<li class="heart"><a href="#"><i class="ion-heart lenght-md"></i></a></li>
+			<li class="stats"><a href="#"><i class="ion-stats-bars lenght-md"></i></a></li>
+		</ul>
+	</div>
+</div>
+<div class="center-text">
+	<p class="yellow-star"><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i></p>
+	
+	<p class="description">Obey T-shirt with Tiger Print1</p>
+	<br>
+	<p class="description"><i class="ion-social-usd"></i> 30.00</p>
+</div>	
+
+
 						</div>
-						<div class="jumbo align-horizontally add-to-cart">
-							<span><i class="ion-plus"></i></span>
-							<p>Add To Cart</p>
+						<div class="col-lg-4">
+							<div class="relative-position">
+	<img src="assets/img/barbourInternationT-shirt.jpg" class="img-responsive"><br>
+
+	<div class="bottom-panel-img">
+		<ul class="no-style">
+			<li><a class="addtocart" onclick="return hey(2, this);" href="#">ADD TO CART</a></li>
+			<li class="eye"><a href="#"><i class="ion-eye lenght-md"></i></a></li>
+			<li class="heart"><a href="#"><i class="ion-heart lenght-md"></i></a></li>
+			<li class="stats"><a href="#"><i class="ion-stats-bars lenght-md"></i></a></li>
+		</ul>
+	</div>
+</div>
+<div class="center-text">
+	<p class="yellow-star"><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i></p>
+	
+	<p class="description">Obey T-shirt with Tiger Print2</p>
+	<br>
+	<p class="description"><i class="ion-social-usd"></i> 35.00</p>
+</div>	
+
+
 						</div>
-						<div class="align-horizontally">
-							<span class="circle circle-grey active"><i class="ion-ios-heart"></i></span>
+						<div class="col-lg-4">
+							<div class="relative-position">
+	<img src="assets/img/NikeDrawstringBackpack.jpg" class="img-responsive"><br>
+
+	<div class="bottom-panel-img">
+		<ul class="no-style">
+			<li><a class="addtocart" onclick="return hey(3, this);" href="#">ADD TO CART</a></li>
+			<li class="eye"><a href="#"><i class="ion-eye lenght-md"></i></a></li>
+			<li class="heart"><a href="#"><i class="ion-heart lenght-md"></i></a></li>
+			<li class="stats"><a href="#"><i class="ion-stats-bars lenght-md"></i></a></li>
+		</ul>
+	</div>
+</div>
+<div class="center-text">
+	<p class="yellow-star"><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i></p>
+	
+	<p class="description">Obey T-shirt with Tiger Print3</p>
+	<br>
+	<p class="description"><i class="ion-social-usd"></i> 39.99</p>
+</div>	
+
+
 						</div>
 					</div>
+
 				</div>
 
 				<div class="col-lg-3">
@@ -176,15 +354,6 @@
 							<p class="price line-through"><i class="ion-social-usd"></i> 35.00</p>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-9">
-					<ul class="nav nav-tabs">
-					  <li role="presentation" class="active"><a href="#">Home</a></li>
-					  <li role="presentation"><a>Profile</a></li>
-					  <li role="presentation"><a>Messages</a></li>
-					</ul>
 				</div>
 			</div>
 		</div>
@@ -263,5 +432,10 @@
 		</ul>
 	</div>
 </footer>
-	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="assets/js/product_layout.js"></script>
 </body>
+</html>

@@ -100,10 +100,7 @@ section {
 	height: 450px;
 }
 
-.lenght-md {
-	font-size: 27px;/* Approximation due to font substitution */
-	font-weight: 600;
-}
+
 
 .text-center {
 	text-align: center;
@@ -127,6 +124,7 @@ section {
 	position: absolute;
 	width: 53px;
 	height: 27px;
+	line-height: 27px;
 	right: 19px;
 	top: 19px;
 	font-family: Poppins;
@@ -134,6 +132,9 @@ section {
 	font-size: 12px;/* Approximation due to font substitution */
 	text-align: center;
 	z-index: 1;
+	font-weight: bold;
+    font-family: monospace;
+    font-size: 19px;
 }
 
 .new-product {
@@ -144,14 +145,7 @@ section {
 	background-color: #cc3300;
 }
 
-.bottom-panel-img {
-	position: absolute;
-	background-color: black;
-	height: 46px;
-	bottom: -50px;
-	width: 270px;
-    transition: 0.5s;
-}
+
 
 .product-image {
 	height: 360px;
@@ -159,44 +153,7 @@ section {
 	position: relative;
 }
 
-.no-style {
-	list-style: none;
-	padding-left: 15px;
-	display: flex;
-}
 
-.list-pleft {
-	list-style: none;
-	padding-left: 15px;
-	line-height: 28px;
-}
-
-.no-style li {
-	display: inline-block;
-	padding: 0px 8px 8px 8px;
-	height: 46px;
-	line-height: 46px;
-}
-
-.no-style li a {
-	color: white;
-}
-
-.relative-position:hover .bottom-panel-img {
-	bottom: 0;
-} 
-
-.eye:hover {
-	background-color: grey;
-}
-
-.heart:hover {
-	background-color: grey;
-}
-
-.stats:hover {
-	background-color: grey;
-}
 
 .list-pleft li {
 	display: flex;
@@ -233,6 +190,10 @@ section {
 .circle-blue {
 	background-color: blue;
 	opacity: 0.1;
+}
+
+.circle:hover {
+	border: 1px solid black;
 }
 
 .circle-pink {
@@ -283,5 +244,10 @@ section {
 		background-color: #990000;
 		width: 100%;
 		height: 58px;
+		color: white;
+	}
+
+	.red-box p {
+		color: white;
 	}
 }

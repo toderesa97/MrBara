@@ -5,7 +5,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Shop Categories</title>
 	<meta name="description" content="Home Basic layout site">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
@@ -24,7 +24,7 @@
 	<label for="checkbox" class="checkbox"><i class="ion-navicon-round"></i></label>
 	<input type="checkbox" id="checkbox" role="button">
 	<a href="index.html" class="web-title">Mr.Bara</a>
-	<a href="#"><i class="ion-bag"></i></a>
+	
 	<div id="the_bag">
 		<a href="#"><i class="ion-bag"></i></a>
 		<span>0</span>
@@ -34,7 +34,7 @@
 			<nav class="no-responsive">
 	<ul>
 		<li>HOME <i class="ion-ios-arrow-down"></i></li>
-		<li>SHOP <i class="ion-ios-arrow-down"></i></li>
+		<li><a href="shop_categories.html">SHOP </a><i class="ion-ios-arrow-down"></i></li>
 		<li>PAGE <i class="ion-ios-arrow-down"></i></li>
 		<li>PORTFOLIO <i class="ion-ios-arrow-down"></i></li>
 		<li>BLOG <i class="ion-ios-arrow-down"></i></li>
@@ -67,33 +67,30 @@
 	</div>
 		<!-- Products -->
 	<div class="row">
-		<div class="col-lg-1"></div>
-		<div class="col-lg-10">
+		<div class="col-lg-1 col-xs-1"></div>
+		<div class="col-lg-10 col-xs-10">
 			<!-- overflow: auto -->
 			<div id="products-display">
-				<div id="nothing-bought-msg">
-					<span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
-					<p>Nothing bought yet...</p>
-				</div>
+
 			</div>
 		</div>
-		<div class="col-lg-1"></div>
+		<div class="col-lg-1 col-xs-1"></div>
 	</div>
 	<!-- Total zone -->
 	<div class="row">
-		<div class="col-lg-1"></div>
-		<div class="col-lg-10">
+		<div class="col-lg-1 col-xs-1"></div>
+		<div class="col-lg-10 col-xs-10">
 			<div class="subtotal align-horizontally">
 				<p>SUBTOTAL</p>
 				<p class="price" id="cart-price"><i class="ion-social-usd"></i> 36.00</p>
 			</div>
 		</div>
-		<div class="col-lg-1"></div>
+		<div class="col-lg-1 col-xs-1"></div>
 	</div>
 	<!-- Product zone -->
 	<div class="row">
-		<div class="col-lg-1"></div>
-		<div class="col-lg-10">
+		<div class="col-lg-1 col-xs-1"></div>
+		<div class="col-lg-10 col-xs-10">
 			<div class="butttons align-horizontally">
 				<div class="jumbo align-horizontally view-cart">
 					<p>View cart</p>
@@ -105,7 +102,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-1"></div>
+		<div class="col-lg-1 col-xs-1"></div>
 	</div>
 </div>
 
@@ -183,7 +180,7 @@
 					</div>
 				</div>
 				<div class="col-lg-9">
-					<img src="assets/img/dummy.jpg" class="img-responsive large-model">
+					<img src="http://res.cloudinary.com/dx14yj8j9/image/upload/c_fill,h_258,w_848/v1501272535/mHOa0zl-l7esE1mhWfmMOg-default_hrohgp.jpg" class="img-responsive large-model">
 					<div class="row align">
 						<div class="col-lg-4">
 							<p><span class="red">1260</span> PRODUCTS FOUND</p>
@@ -210,8 +207,9 @@
 			<p class="web-title">Mr.Bara's Shop</p>
 			<div class="row">
 				<div class="col-md-12 col-sm-12 col-sx-12">
-					<div class="red-box">
+					<div class="red-box align-horizontally">
 						<p>FILTER BY</p>
+						<span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span>
 					</div>
 				</div>
 			</div>
