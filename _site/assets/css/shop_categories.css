@@ -43,6 +43,7 @@ header .right-nav ul li a {
 	display: block;
 	line-height: 41px;
     text-align: center;
+    overflow: hidden;
 }
 
 .circle-grey {
