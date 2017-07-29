@@ -146,3 +146,8 @@ section .page-title {
 #related-products .relative-position {
 	max-height: 350px;
 }
+
+#pladdtocart a {
+	text-decoration: none;
+	color: white;
+}

@@ -50,6 +50,11 @@ header .right-nav ul li a {
 	background-color: #ececec;
 }
 
+nav.no-responsive ul li a {
+	color: black;
+	text-decoration: none;
+}
+
 
 
 section {

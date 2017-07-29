@@ -31,7 +31,15 @@ $(document).ready(function(){
 
 	cartIsEmpty();
 
-
+	if (sessionStorage.getItem('preview_product') !== null) {
+		var theid = sessionStorage.getItem('preview_product');
+		// considering that the pattern is always the same 
+		var new_url = clothes[theid].url.replace('c_fill,h_450,w_270', 'c_fill,h_490,w_335');
+		$('#plimg').prop('src', new_url);
+		$('#descrp').text(`${clothes[theid].description}`);
+		$('#plprice').html(`<i class="ion-social-usd"></i>  ${clothes[theid].price}`);
+		$('#pladdtocart').html(`<a onclick="hey(${clothes[theid].id})">Add To Cart</a>`);
+	}
 
 	var products = "";
 	for(var i=0; i<clothes.length; i++) {
@@ -49,7 +57,7 @@ $(document).ready(function(){
 			products += `<li><a class="addtocart" onclick="return hey(${clothes[i].id}, this);" href="#">ADD TO CART</a></li>`;
 		}
 			
-		products +=	`<li class="eye"><a onclick="view_product(${clothes[i].id})" href="#"><i class="ion-eye lenght-md"></i></a></li>
+		products +=	`<li class="eye"><a onclick="view_product(${clothes[i].id})"><i class="ion-eye lenght-md"></i></a></li>
 								<li class="heart"><a href="#"><i class="ion-heart lenght-md"></i></a></li>
 								<li class="stats"><a href="#"><i class="ion-stats-bars lenght-md"></i></a></li>
 							</ul>
@@ -92,10 +100,10 @@ $(document).ready(function(){
     });
     $('.ion-minus').click(function() {
     	var actual = parseInt($('#counter-number').text())-1;
-    	if (actual > 0) {
+    	if (actual > 1) {
     		$('#counter-number').text(actual);
     	} else {
-    		$('#counter-number').text('0');
+    		$('#counter-number').text('1');
     	}
     	
     });
@@ -216,6 +224,6 @@ function remove_item (id) {
 }
 
 function view_product(id) {
-	alert(`viewing product ${id}`);
-	
+	sessionStorage.setItem('preview_product', id);
+	window.location.replace("product_layout.html");
 }
