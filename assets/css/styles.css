@@ -496,10 +496,26 @@ img.xs-model {
 	padding-top: 10px;
 }
 
+#social-media {
+	position: absolute;
+	bottom: 78px;
+	left: 78px;
+}
+
+#social-media i {
+	font-size: 24px;
+	color: white;
+}
+
+#social-media .red {
+	color: #990000;
+}
+
 nav.no-responsive ul li a {
 	color: white;
 	text-decoration: none;
 }
+
 
 @media only screen and (max-width: 500px) {
 	#skater {
@@ -636,5 +652,10 @@ nav.no-responsive ul li a {
 		width: 350px; 
 		right: -350px;
 	}
+
+	#social-media {
+		display: none;
+	}
+
 }
 
