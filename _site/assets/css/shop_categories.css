@@ -46,9 +46,16 @@ header .right-nav ul li a {
     overflow: hidden;
 }
 
-.circle-grey {
+li .circle-grey {
 	background-color: #ececec;
+	opacity: 0.4;
 }
+
+li .circle-grey:hover {
+	cursor: pointer;
+}
+
+
 
 nav.no-responsive ul li a {
 	color: black;
@@ -183,6 +190,11 @@ section {
 
 .circle.active {
 	opacity: 1;
+	border: 1px solid black;
+}
+
+.circle.circle-black.active .ion-checkmark {
+	color: white;
 }
 
 .circle.active .ion-checkmark {
@@ -195,7 +207,7 @@ section {
 
 .circle-blue {
 	background-color: blue;
-	opacity: 0.1;
+	opacity: 0.4;
 }
 
 .circle:hover {
@@ -204,19 +216,27 @@ section {
 
 .circle-pink {
 	background-color: pink;
-	opacity: 0.1;
+	opacity: 0.4;
 }
 
 .circle-green {
 	background-color: green;
-	opacity: 0.1;
+	opacity: 0.4;
 }
 
 .circle-red {
 	background-color: red;
-	opacity: 0.1;
+	opacity: 0.4;
 }
 
+.circle-black {
+	background-color: #000;
+	opacity: 0.4;
+}
+
+#display-all {
+	cursor: pointer;
+}
 /**/
 
 @media only screen and (max-width: 1430px) {

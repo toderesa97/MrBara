@@ -1,14 +1,27 @@
 
-var clothes = [{nos:'new', id:0, description:'Obey T-shirt with Tiger Print0', price:0, price_old: undefined, url:'http://res.cloudinary.com/dx14yj8j9/image/upload/c_fill,h_450,w_270/v1501272946/d6fdea3b3a41a016caca0db39195fbbd--skate-fashion-tomboy-fashion_po5xz3.jpg'},
-{nos:'new', id:1, description:'Obey T-shirt with Tiger Print1', price:10, price_old: undefined, url:'http://res.cloudinary.com/dx14yj8j9/image/upload/c_fill,h_450,w_270/v1501260638/LonglineHoodedT-shirt_opvcru.jpg'},
-{nos:'sale', id:2, description:'Obey T-shirt with Tiger Print2', price:20, price_old: undefined, url:'http://res.cloudinary.com/dx14yj8j9/image/upload/c_fill,h_450,w_270/v1501260638/barbourInternationT-shirt_k4wq0c.jpg'},
-{nos:'sale', id:3, description:'Obey T-shirt with Tiger Print3', price:30, price_old: 38, url:'assets/img/NikeDrawstringBackpack.jpg'},
-{nos:'sale', id:4, description:'Obey T-shirt with Tiger Print4', price:40, price_old: undefined, url:'https://cdn.vox-cdn.com/uploads/chorus_asset/file/5851535/GettyImages-465888368.0.jpg'},
-{nos:'sale', id:5, description:'Obey T-shirt with Tiger Print5', price:50, price_old: 35, url:'http://cometrend.com/wp-content/uploads/2016/03/33-11-684x1024.jpg'},
-{nos:'new', id:6, description:'Obey T-shirt with Tiger Print6', price:60, price_old: 45, url:'http://i.imgur.com/jyCXuJs.jpg'},
-{nos:'sale', id:7, description:'Obey T-shirt with Tiger Print7', price:70, price_old: undefined, url:'http://2.bp.blogspot.com/-NELJRBM5FNI/UlVLhlO-gNI/AAAAAAAAAsg/_BNRO-paQyA/s1600/Saskia+Elisa_DSC0223_01.JPG'},
-{nos:'new', id:8, description:'Obey T-shirt with Tiger Print8', price:80, price_old: undefined, url:'http://www.123mobilewallpapers.com/wp-content/uploads/2015/03/hot_girl_sit_on_skateboard.jpg'}];
+var clothes = [{nos:'new', id:0, description:'Obey T-shirt with Tiger Print0', price:5, price_old: undefined, 
+color:'blue', sizes:['XS', 'L'], url:'http://res.cloudinary.com/dx14yj8j9/image/upload/c_fill,h_450,w_270/v1501272946/d6fdea3b3a41a016caca0db39195fbbd--skate-fashion-tomboy-fashion_po5xz3.jpg'},
+{nos:'new', id:1, description:'Obey T-shirt with Tiger Print1', price:10, price_old: undefined, 
+color: 'blue', sizes:['M', 'L'], url:'http://res.cloudinary.com/dx14yj8j9/image/upload/c_fill,h_450,w_270/v1501260638/LonglineHoodedT-shirt_opvcru.jpg'},
+{nos:'sale', id:2, description:'Obey T-shirt with Tiger Print2', price:20, price_old: undefined, 
+color: 'black', sizes:['XS', 'L'], url:'http://res.cloudinary.com/dx14yj8j9/image/upload/c_fill,h_450,w_270/v1501260638/barbourInternationT-shirt_k4wq0c.jpg'},
+{nos:'sale', id:3, description:'Obey T-shirt with Tiger Print3', price:30, price_old: 38, 
+color: 'black', sizes:['XL', 'L'],url:'assets/img/NikeDrawstringBackpack.jpg'},
+{nos:'sale', id:4, description:'Obey T-shirt with Tiger Print4', price:40, price_old: undefined,
+color: 'red', sizes:['XS', 'M', 'S'], url:'https://cdn.vox-cdn.com/uploads/chorus_asset/file/5851535/GettyImages-465888368.0.jpg'},
+{nos:'sale', id:5, description:'Obey T-shirt with Tiger Print5', price:50, price_old: 35, 
+color: 'blue', sizes:['XS', 'L', 'XS'], url:'http://cometrend.com/wp-content/uploads/2016/03/33-11-684x1024.jpg'},
+{nos:'new', id:6, description:'Obey T-shirt with Tiger Print6', price:60, price_old: 45, 
+color: 'green', sizes:['XS', 'L', 'M'], url:'http://i.imgur.com/jyCXuJs.jpg'},
+{nos:'sale', id:7, description:'Obey T-shirt with Tiger Print7', price:70, price_old: undefined, 
+color: 'pink', sizes:['XS', 'L', 'XL'], url:'http://2.bp.blogspot.com/-NELJRBM5FNI/UlVLhlO-gNI/AAAAAAAAAsg/_BNRO-paQyA/s1600/Saskia+Elisa_DSC0223_01.JPG'},
+{nos:'new', id:8, description:'Obey T-shirt with Tiger Print8', price:80, price_old: undefined,
+color: 'black', sizes:['XS', 'L'], url:'http://www.123mobilewallpapers.com/wp-content/uploads/2015/03/hot_girl_sit_on_skateboard.jpg'}];
 var arr = [];
+var colors = ['red', 'blue', 'pink', 'green', 'black'];
+var sz = ['xs', 's', 'm', 'l', 'xl'];
+var chosen_color = undefined;
+var chosen_size = undefined;
 
 $(document).ready(function(){
 	if (sessionStorage.getItem('total') === null) {
@@ -41,8 +54,132 @@ $(document).ready(function(){
 		$('#pladdtocart').html(`<a onclick="hey(${clothes[theid].id})">Add To Cart</a>`);
 	}
 
+	
+	$('#all-products').html(calculate_products('all', 'all'));
+
+    $(".ion-bag").click(function(){
+        $('#shop-cart').css({"right":"0"});
+        $('#overlayer').css({"display":"block"});
+    });
+
+    $('.ion-plus').click(function() {
+    	var actual = parseInt($('#counter-number').text())+1;
+    	$('#counter-number').text(actual);
+    });
+    $('.ion-minus').click(function() {
+    	var actual = parseInt($('#counter-number').text())-1;
+    	if (actual > 1) {
+    		$('#counter-number').text(actual);
+    	} else {
+    		$('#counter-number').text('1');
+    	}
+    	
+    });
+
+    $(".circle.circle-red").click(function() {
+    	apply_color_filter('red', true);
+    });
+    $(".circle.circle-blue").click(function() {
+    	apply_color_filter('blue', true);
+    });
+    $(".circle.circle-pink").click(function() {
+    	apply_color_filter('pink', true);
+    });
+    $(".circle.circle-green").click(function() {
+    	apply_color_filter('green', true);
+    });
+    $(".circle.circle-black").click(function() {
+    	apply_color_filter('black', true);
+    });
+    $("#display-all").click(function() {
+
+    	chosen_color = undefined;
+    	chosen_size = undefined;
+    	$('#all-products').html(calculate_products('all', 'all'));
+    	
+    });
+
+    $('#close').click(close);
+
+    $('#overlayer').click(close);
+    $(".circle.circle-grey.s").click(function() {
+    	apply_size_filter('s', true);
+    });
+    $(".circle.circle-grey.xs").click(function() {
+    	apply_size_filter('xs', true);
+    });
+    $(".circle.circle-grey.m").click(function() {
+    	apply_size_filter('m', true);
+    });
+    $(".circle.circle-grey.l").click(function() {
+    	apply_size_filter('l', true);
+    	
+    });
+    $(".circle.circle-grey.xl").click(function() {
+    	apply_size_filter('xl', true);
+    });
+});
+
+function apply_color_filter(color, proceed) {
+	chosen_color = color;
+	for (var i = 0; i < colors.length; i++) {
+		if (color == colors[i]) {
+			$(`.circle.circle-${color}`).addClass("active");
+		} else {
+			$(`.circle.circle-${colors[i]}`).removeClass("active");
+		}
+	}
+	if (proceed) {
+		$('#all-products').html(calculate_products(color, chosen_size));	
+	}
+	
+}
+
+function apply_size_filter (size, proceed) {
+	chosen_size = size;
+	for (var i = 0; i < sz.length; i++) {
+		if (size == sz[i]) {
+			$(`.circle.circle-grey.${size}`).addClass("active");
+		} else {
+			$(`.circle.circle-grey.${sz[i]}`).removeClass("active");
+		}
+	}
+	if (proceed) {
+		$('#all-products').html(calculate_products(chosen_color, size));	
+	}
+	
+}
+
+function calculate_products(color, size) {
 	var products = "";
+	console.log(`to calculate ${color} && ${size}`);
 	for(var i=0; i<clothes.length; i++) {
+		// just filtering by color
+		if (color == 'all' && size == 'all'){
+			apply_size_filter('all', false);
+			apply_color_filter('all', false);
+		} else {
+			if (size == 'all') {
+				
+				if (!(color == clothes[i].color)) {
+					continue;
+				}
+				
+			} else if (color == 'all') { // just filtering by size
+				
+				if (!(clothes[i].sizes.some(el => el==size.toUpperCase()) )) { // if the size is not among the available ones then continue;
+					continue;
+				}
+							
+			} else { // filtering by either, size and color
+				if (! (clothes[i].color == color && clothes[i].sizes.some(el => el==size.toUpperCase()))) {
+					continue;
+				}
+			}		
+		}
+
+
+		
 		products += `
 			<div class="col-lg-4">
 				<div class="relative-position std-model">
@@ -86,58 +223,8 @@ $(document).ready(function(){
 			`;
 		}
 	}
-	console.log(products);
-	$('#all-products').html(products);
-
-    $(".ion-bag").click(function(){
-        $('#shop-cart').css({"right":"0"});
-        $('#overlayer').css({"display":"block"});
-    });
-
-    $('.ion-plus').click(function() {
-    	var actual = parseInt($('#counter-number').text())+1;
-    	$('#counter-number').text(actual);
-    });
-    $('.ion-minus').click(function() {
-    	var actual = parseInt($('#counter-number').text())-1;
-    	if (actual > 1) {
-    		$('#counter-number').text(actual);
-    	} else {
-    		$('#counter-number').text('1');
-    	}
-    	
-    });
-
-    $(".circle.circle-red").click(function() {
-    	$(".circle.circle-red").addClass("active");
-    	$(".circle.circle-blue").removeClass("active");
-    	$(".circle.circle-pink").removeClass("active");
-    	$(".circle.circle-green").removeClass("active");
-    	
-    });
-    $(".circle.circle-blue").click(function() {
-    	$(".circle.circle-blue").addClass("active");
-    	$(".circle.circle-red").removeClass("active");
-    	$(".circle.circle-pink").removeClass("active");
-    	$(".circle.circle-green").removeClass("active");
-    });
-    $(".circle.circle-pink").click(function() {
-    	$(".circle.circle-pink").addClass("active");
-    	$(".circle.circle-blue").removeClass("active");
-    	$(".circle.circle-red").removeClass("active");
-    	$(".circle.circle-green").removeClass("active");
-    });
-    $(".circle.circle-green").click(function() {
-    	$(".circle.circle-green").addClass("active");
-    	$(".circle.circle-blue").removeClass("active");
-    	$(".circle.circle-red").removeClass("active");
-    	$(".circle.circle-pink").removeClass("active");
-    });
-
-    $('#close').click(close);
-
-    $('#overlayer').click(close);
-});
+	return products;
+}
 
 function cartIsEmpty () {
 	if (sessionStorage.getItem('buys') == 0) {
